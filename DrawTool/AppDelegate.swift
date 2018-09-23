@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  DrawTool
 //
-//  Created by Akshay Kadam on 23/09/18.
+//  Created by Rasika Patil
 //  Copyright © 2018 Rasika Patil. All rights reserved.
 //
 

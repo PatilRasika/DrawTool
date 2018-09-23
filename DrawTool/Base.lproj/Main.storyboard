@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="17G65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DrawTool" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,119 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q3y-vU-FUm" customClass="DrawView" customModule="DrawTool" customModuleProvider="target">
+                                <rect key="frame" x="4" y="75" width="594" height="523"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ja-hH-brk">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="63" id="Isu-bo-Crn"/>
+                                    <constraint firstAttribute="height" constant="30" id="O7n-4c-nZE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Isu-bo-Crn"/>
+                                        <exclude reference="O7n-4c-nZE"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Isu-bo-Crn"/>
+                                        <include reference="O7n-4c-nZE"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="clearTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pou-LW-GUf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXE-a9-YW2">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="9E9-JO-7be">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="66"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="30" id="Fw6-O6-fB2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Export">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9E9-JO-7be"/>
+                                        <exclude reference="Fw6-O6-fB2"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="9E9-JO-7be"/>
+                                        <include reference="Fw6-O6-fB2"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="shareOnlyImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YNr-AV-uiy"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5Ja-hH-brk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="3" id="4tW-j5-iP6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="q3y-vU-FUm" secondAttribute="bottom" id="Vdb-ka-2Ls"/>
+                            <constraint firstItem="sXE-a9-YW2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="c9g-c6-d1i"/>
+                            <constraint firstItem="5Ja-hH-brk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="cZ6-eO-CCy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="q3y-vU-FUm" secondAttribute="trailing" constant="-20" id="e3o-Hw-qPf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sXE-a9-YW2" secondAttribute="trailing" constant="7" id="f3L-HF-ogn"/>
+                            <constraint firstItem="q3y-vU-FUm" firstAttribute="top" secondItem="sXE-a9-YW2" secondAttribute="bottom" constant="8" id="li8-7k-otn"/>
+                            <constraint firstItem="q3y-vU-FUm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="yQk-ae-FNp"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="5Ja-hH-brk"/>
+                                <exclude reference="sXE-a9-YW2"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="4tW-j5-iP6"/>
+                                <exclude reference="cZ6-eO-CCy"/>
+                                <exclude reference="e3o-Hw-qPf"/>
+                                <exclude reference="li8-7k-otn"/>
+                                <exclude reference="yQk-ae-FNp"/>
+                                <exclude reference="c9g-c6-d1i"/>
+                                <exclude reference="f3L-HF-ogn"/>
+                                <exclude reference="Vdb-ka-2Ls"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="5Ja-hH-brk"/>
+                                <include reference="sXE-a9-YW2"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="4tW-j5-iP6"/>
+                                <include reference="cZ6-eO-CCy"/>
+                                <include reference="e3o-Hw-qPf"/>
+                                <include reference="li8-7k-otn"/>
+                                <include reference="yQk-ae-FNp"/>
+                                <include reference="c9g-c6-d1i"/>
+                                <include reference="f3L-HF-ogn"/>
+                                <include reference="Vdb-ka-2Ls"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="drawView" destination="q3y-vU-FUm" id="uTz-FU-8dB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="268.5" y="355.5"/>
         </scene>
     </scenes>
 </document>

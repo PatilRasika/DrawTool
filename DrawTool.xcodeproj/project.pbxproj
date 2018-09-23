@@ -12,8 +12,8 @@
 		BA9835C121575EA600686948 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9835BF21575EA600686948 /* Main.storyboard */; };
 		BA9835C321575EA600686948 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA9835C221575EA600686948 /* Assets.xcassets */; };
 		BA9835C621575EA600686948 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9835C421575EA600686948 /* LaunchScreen.storyboard */; };
-		BA9835D121575EA600686948 /* DrawToolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9835D021575EA600686948 /* DrawToolTests.swift */; };
-		BA9835DC21575EA600686948 /* DrawToolUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9835DB21575EA600686948 /* DrawToolUITests.swift */; };
+		BA9835EC21575F4300686948 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9835EB21575F4300686948 /* DrawView.swift */; };
+		BA9835EE2157629500686948 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9835ED2157629500686948 /* Line.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +42,9 @@
 		BA9835C521575EA600686948 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA9835C721575EA600686948 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA9835CC21575EA600686948 /* DrawToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA9835D021575EA600686948 /* DrawToolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawToolTests.swift; sourceTree = "<group>"; };
-		BA9835D221575EA600686948 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA9835D721575EA600686948 /* DrawToolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawToolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA9835DB21575EA600686948 /* DrawToolUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawToolUITests.swift; sourceTree = "<group>"; };
-		BA9835DD21575EA600686948 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA9835EB21575F4300686948 /* DrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DrawView.swift; path = ../DrawView.swift; sourceTree = "<group>"; };
+		BA9835ED2157629500686948 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				BA9835BA21575EA600686948 /* DrawTool */,
-				BA9835CF21575EA600686948 /* DrawToolTests */,
-				BA9835DA21575EA600686948 /* DrawToolUITests */,
 				BA9835B921575EA600686948 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,32 +93,16 @@
 		BA9835BA21575EA600686948 /* DrawTool */ = {
 			isa = PBXGroup;
 			children = (
+				BA9835EB21575F4300686948 /* DrawView.swift */,
 				BA9835BB21575EA600686948 /* AppDelegate.swift */,
 				BA9835BD21575EA600686948 /* ViewController.swift */,
 				BA9835BF21575EA600686948 /* Main.storyboard */,
+				BA9835ED2157629500686948 /* Line.swift */,
 				BA9835C221575EA600686948 /* Assets.xcassets */,
 				BA9835C421575EA600686948 /* LaunchScreen.storyboard */,
 				BA9835C721575EA600686948 /* Info.plist */,
 			);
 			path = DrawTool;
-			sourceTree = "<group>";
-		};
-		BA9835CF21575EA600686948 /* DrawToolTests */ = {
-			isa = PBXGroup;
-			children = (
-				BA9835D021575EA600686948 /* DrawToolTests.swift */,
-				BA9835D221575EA600686948 /* Info.plist */,
-			);
-			path = DrawToolTests;
-			sourceTree = "<group>";
-		};
-		BA9835DA21575EA600686948 /* DrawToolUITests */ = {
-			isa = PBXGroup;
-			children = (
-				BA9835DB21575EA600686948 /* DrawToolUITests.swift */,
-				BA9835DD21575EA600686948 /* Info.plist */,
-			);
-			path = DrawToolUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +237,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA9835BE21575EA600686948 /* ViewController.swift in Sources */,
+				BA9835EE2157629500686948 /* Line.swift in Sources */,
 				BA9835BC21575EA600686948 /* AppDelegate.swift in Sources */,
+				BA9835EC21575F4300686948 /* DrawView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +247,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA9835D121575EA600686948 /* DrawToolTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +254,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA9835DC21575EA600686948 /* DrawToolUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
